@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Quick Password Manager | Varad Sandeep Naik</title>
+    <link rel="shortcut icon" href="Resources/Logos/TitleLogo.png" type="image/png">
+</head>
+<body>
+    <div class="main-body">
+        <div class="header">
+            <h1>Quick Password Manager</h1>
+            <p>By Varad Sandeep Naik</p>
+        </div>
+        <div class="passwordInput">
+            <div class="for">
+                <input type="text" id="PassowordFor" placeholder="Passoword For">
+            </div>
+            <div class="password">
+                <div class="password-div">
+                    <input type="text" id="password" placeholder="Password">
+                    <input type="number" name="characters" id="characters" min="10" max="40" value="10">
+                </div>
+                <button id="copy" onclick="CopyPassword()"><img src="Resources/Images/copy.png" alt=""></button>
+            </div>
+        </div>
+        <div class="passwordGeneration">
+            <button id="generateButton" onclick="passwordGenerate()"><div class="generate">
+                <img src="Resources/Images/download.png" alt="">
+                <p>Generate</p>
+            </div></button>
+            <div class="characters">
+                
+            </div>
+        </div>
+        <div class="functions">
+            <button id="save" onclick="SavePassword()">Save Passoword</button>
+            <button id="retrieve" onclick="retrievePassword()">Retrieve Passoword</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
