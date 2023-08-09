@@ -4,43 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Linking the CSS file -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Assigning the Title -->
     <title>Quick Password Manager | Varad Sandeep Naik</title>
+    <!-- Adding Title Logo -->
     <link rel="shortcut icon" href="Resources/Logos/TitleLogo.png" type="image/png">
 </head>
 <body>
+    <!-- Structuring Main Body -->
     <div class="main-body">
+        <!-- Structuring Header -->
         <div class="header">
             <h1>Quick Password Manager</h1>
             <p>By Varad Sandeep Naik</p>
         </div>
+        <!-- Structuring Password Input -->
         <div class="passwordInput">
             <div class="for">
+                <!-- Adding a input box for user to write for what the website the password is for -->
                 <input type="text" id="PassowordFor" placeholder="Passoword For">
             </div>
+            <!-- Structuring a div that will carry the Fields to display and customize(set length) for the generated password -->
             <div class="password">
                 <div class="password-div">
+                    <!-- Adding input field that will show the generated password -->
                     <input type="text" id="password" placeholder="Password">
+                    <!-- adding a number type input to set the length of generated password -->
                     <input type="number" name="characters" id="characters" min="10" max="40" value="10">
                 </div>
-                <button id="copy" onclick="CopyPassword()"><img src="Resources/Images/copy.png" alt=""></button>
+                <!-- Structuring a button to copy the generated password and assigning CopyPassword() Function onclick -->
+                <button id="copy" onclick="CopyPassword()">
+                    <!-- Adding a Clipboard Image to the button -->
+                    <img src="Resources/Images/copy.png" alt="COPY">
+                </button>
             </div>
         </div>
+        <!-- Structuring the div that will have a passwordGeneration button and call passwordGenerate() Function and generate a random password -->
         <div class="passwordGeneration">
+            <!-- Creating a Generate Random Password Button -->
             <button id="generateButton" onclick="passwordGenerate()"><div class="generate">
+                <!-- Adding a download image to the button -->
                 <img src="Resources/Images/download.png" alt="">
-                <p>Generate</p>
+                <!-- Adding text "Generate Random Password" to the button -->
+                <p>Generate Random Password</p>
             </div></button>
-            <div class="characters">
-                
-            </div>
         </div>
+        <!-- structuring the div that will carry Secondary Function that will act on Generated Password -->
         <div class="functions">
+            <!-- Adding a save button that will call SavePassword() function onclick and will save the random generated password to local storage -->
             <button id="save" onclick="SavePassword()">Save Passoword</button>
+            <!-- Adding a Retrieve button that will call retrievePassword() fuction onclick to retrieve password from local storage -->
             <button id="retrieve" onclick="retrievePassword()">Retrieve Passoword</button>
         </div>
     </div>
+    <!-- Linking the JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>

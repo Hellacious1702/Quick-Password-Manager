@@ -169,7 +169,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .passwordGeneration #generateButton{
     border: var(--primary-border);
-    padding: 8px 40px;
+    padding: 8px 200px;
     border-radius: var(--input-border-radius);
     font-size: 15px;
     background-color: var(--passwordGeneration-button-bg-color);
@@ -188,6 +188,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .functions{
+    display: flex;
+    justify-content: space-between;
     margin: 20px;
 }
 
