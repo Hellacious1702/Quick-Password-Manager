@@ -1,5 +1,6 @@
 // Adding the elements using assigned ID from index.html
 let Passworbox = document.getElementById('password');
+let PasswordFor = document.getElementById('PassowordFor');
 let GenerateButton = document.getElementById('generateButton');
 let NumberofCharacters = document.getElementById('characters');
 let PassowordFor = document.getElementById('PassowordFor');
@@ -18,7 +19,7 @@ let length = NumberofCharacters.value;
 // final constant holding how the password will be formed and ordered
 const allChars = UpperCase + LowerCase + Numbers + Symbols;
 
-// Creating function to Generate Password+
+// Creating function to Generate Password
 function passwordGenerate(){
     // Calling the function setPasswordLength() to decide the length of the password based on user-input
     setPasswordLength();
@@ -50,11 +51,16 @@ function CopyPassword(){
 
 // Creating a function that will store the generated password to the local storage
 function SavePassword(){
-    // converting any type of string to lowercase so it will be easier to search
-    let PassowordForLower = PassowordFor.value.toLowerCase();
-    localStorage.setItem(PassowordForLower , Passworbox.value);
-    // Clearing the Generated password display on the website
-    Passworbox.value = "";
+    if(PasswordFor.value.length === 0){
+        //  User will get a alert if the "Password For" input is empty
+        alert('Please Enter What The Password is For');
+    }else{
+        // converting any type of string to lowercase so it will be easier to search
+        let PassowordForLower = PassowordFor.value.toLowerCase();
+        localStorage.setItem(PassowordForLower , Passworbox.value);
+        // Clearing the Generated password display on the website
+        Passworbox.value = "";
+    }
 }
 
 // Creating a function to retrieve a saved password from the local storage
